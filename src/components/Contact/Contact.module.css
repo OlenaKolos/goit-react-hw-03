@@ -1,6 +1,4 @@
-.contactItem {
-
-
+.contactCard {
     border: 1px solid #ccc;
     border-radius: 7px;
     padding: 12px;
@@ -11,19 +9,20 @@
     width: 300px;
 }
 
-.contactName {
+.contactInfo {
     display: flex;
+    margin-bottom: 8px;
     align-items: center;
     gap: 8px;
     font-size: 16px;
     line-height: 1;
-    margin-bottom: 8px;
 }
 
-.contactNumber {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.contactValue {
     font-size: 16px;
     line-height: 1;
+}
+
+.contactData {
+    margin-top: 5px;
 }

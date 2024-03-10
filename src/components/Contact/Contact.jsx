@@ -1,24 +1,25 @@
 import PropTypes from "prop-types";
-import { FaUser } from "react-icons/fa";
-import { FaPhone } from "react-icons/fa6";
+import { FaUser, FaPhone } from "react-icons/fa";
 
 import css from "./Contact.module.css";
 
 const Contact = ({ id, name, number, onDeleteContact }) => {
   return (
-    <li className={css.contactItem}>
-      <div>
-        <span className={css.contactName}>
-          <FaUser /> {name}
-        </span>
-        <span className={css.contactNumber}>
-          <FaPhone /> {number}
-        </span>
+    <div className={css.contactCard}>
+      <div className={css.contactData}>
+        <div className={css.contactInfo}>
+          <FaUser />
+          <span className={css.contactValue}>{name}</span>
+        </div>
+        <div className={css.contactInfo}>
+          <FaPhone />
+          <span className={css.contactValue}>{number}</span>
+        </div>
       </div>
       <button type="button" onClick={() => onDeleteContact(id)}>
         Delete
       </button>
-    </li>
+    </div>
   );
 };
 
